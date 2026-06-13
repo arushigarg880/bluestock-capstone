@@ -21,7 +21,7 @@ Author: Arushi Garg
 import sqlite3
 import pandas as pd
 
-conn = sqlite3.connect("bluestock_mf.db")
+conn = sqlite3.connect("data/db/bluestock_mf.db")
 
 queries = {
     "Top 5 fund houses by AUM": """

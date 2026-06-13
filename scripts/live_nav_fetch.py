@@ -40,7 +40,7 @@ def fetch_nav(scheme_code, scheme_name):
         df['fund_house'] = data['meta']['fund_house']
         filename = f"data/raw/live_nav_{scheme_code}.csv"
         df.to_csv(filename, index=False)
-        print(f"  {len(df)} rows saved → {filename}")
+        print(f"  {len(df)} rows saved -> {filename}")
         return df
     else:
         print(f"  ERROR {response.status_code}")

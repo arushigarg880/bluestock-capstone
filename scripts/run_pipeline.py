@@ -9,13 +9,16 @@ Description:
     in correct order.
 
 Usage:
-    python run_pipeline.py
+    python scripts/run_pipeline.py
 
 Author: Arushi Garg
 """
 
 import subprocess
 import sys
+from pathlib import Path
+
+BASE = Path(__file__).parent
 
 def run_script(script_name):
     """Run a Python script and print its status."""
@@ -23,7 +26,7 @@ def run_script(script_name):
     print(f"▶ Running: {script_name}")
     print('='*50)
     result = subprocess.run(
-        [sys.executable, script_name],
+        [sys.executable, str(BASE / script_name)],
         capture_output=True,
         text=True
     )
@@ -44,7 +47,6 @@ if __name__ == "__main__":
     run_script("clean_data.py")
     run_script("load_to_db.py")
     run_script("run_queries.py")
-    run_script("recommender.py")
 
     print("\n✅ Complete pipeline executed successfully!")
     print("📊 Open dashboard/bluestock_mf_dashboard.pbix in Power BI")

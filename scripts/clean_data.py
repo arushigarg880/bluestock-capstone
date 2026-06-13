@@ -54,7 +54,7 @@ df['daily_return_pct'] = df.groupby('amfi_code')['nav'].pct_change() * 100
 # ── Save ───────────────────────────────────────
 df.to_csv("data/processed/clean_nav.csv", index=False)
 print(f"\nClean shape: {df.shape}")
-print("Saved → data/processed/clean_nav.csv")
+print("Saved -> data/processed/clean_nav.csv")
 
 import re
 
@@ -95,7 +95,7 @@ print(tx['kyc_status'].value_counts() if 'kyc_status' in tx.columns else "No kyc
 # ── Save ───────────────────────────────────────
 tx.to_csv("data/processed/clean_transactions.csv", index=False)
 print(f"\nClean transactions shape: {tx.shape}")
-print("Saved → data/processed/clean_transactions.csv")
+print("Saved -> data/processed/clean_transactions.csv")
 # ── Load ──────────────────────────────────────
 perf = pd.read_csv("data/raw/07_scheme_performance.csv")
 print("\nPerformance raw shape:", perf.shape)
@@ -128,4 +128,4 @@ perf[num_cols] = perf[num_cols].fillna(perf[num_cols].median())
 # ── Save ───────────────────────────────────────
 perf.to_csv("data/processed/clean_performance.csv", index=False)
 print(f"\nClean performance shape: {perf.shape}")
-print("Saved → data/processed/clean_performance.csv")
+print("Saved -> data/processed/clean_performance.csv")
