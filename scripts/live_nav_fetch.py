@@ -1,3 +1,25 @@
+"""
+live_nav_fetch.py
+-----------------
+Bluestock Fintech — Mutual Fund Analytics Platform
+Capstone Project | June 2026
+
+Description:
+    Fetches live historical NAV data from mfapi.in REST API
+    for 5 selected mutual fund schemes and saves as raw CSV.
+
+    Schemes fetched:
+    - SBI Bluechip (119551)
+    - ICICI Bluechip (120503)
+    - Nippon Large Cap (118632)
+    - Axis Bluechip (119092)
+    - Kotak Bluechip (120841)
+
+Usage:
+    python live_nav_fetch.py
+
+Author: Arushi Garg
+"""
 import requests
 import pandas as pd
 import os

@@ -1,3 +1,25 @@
+"""
+load_to_db.py
+-------------
+Bluestock Fintech — Mutual Fund Analytics Platform
+Capstone Project | June 2026
+
+Description:
+    Loads all cleaned CSV datasets into SQLite database
+    (bluestock_mf.db) using SQLAlchemy.
+    Creates star schema with dimension and fact tables.
+    Tables created:
+    - dim_fund
+    - dim_date
+    - fact_nav
+    - fact_transactions
+    - fact_performance
+
+Usage:
+    python load_to_db.py
+
+Author: Arushi Garg
+"""
 import pandas as pd
 import sqlite3
 import os

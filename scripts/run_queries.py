@@ -1,3 +1,23 @@
+"""
+run_queries.py
+--------------
+Bluestock Fintech — Mutual Fund Analytics Platform
+Capstone Project | June 2026
+
+Description:
+    Runs 10 analytical SQL queries on the SQLite database
+    (bluestock_mf.db) and prints results including:
+    - Top 5 funds by AUM
+    - Average NAV per month
+    - SIP inflow YoY growth
+    - Transactions by state
+    - Funds with expense ratio below 1%
+
+Usage:
+    python run_queries.py
+
+Author: Arushi Garg
+"""
 import sqlite3
 import pandas as pd
 

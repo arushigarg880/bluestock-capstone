@@ -1,3 +1,23 @@
+"""
+clean_data.py
+-------------
+Bluestock Fintech — Mutual Fund Analytics Platform
+Capstone Project | June 2026
+
+Description:
+    Cleans and validates all 10 raw datasets including:
+    - Parsing dates to datetime format
+    - Forward-filling missing NAV values for holidays
+    - Removing duplicate rows
+    - Standardising transaction type values
+    - Validating numeric columns and ranges
+    Saves cleaned files to data/processed/ folder.
+
+Usage:
+    python clean_data.py
+
+Author: Arushi Garg
+"""
 import pandas as pd
 import numpy as np
 import os
